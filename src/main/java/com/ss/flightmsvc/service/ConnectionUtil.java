@@ -18,14 +18,19 @@ import java.sql.SQLException;
 public class ConnectionUtil {
 	public final String driver = "com.mysql.cj.jdbc.Driver";
 	public String url = "jdbc:mysql://MySQL:3306/utopia";
-	public final String username = "root";
-	public final String password = "A1l1ngAgedAlb@tross";
+	public final String username = "";
+	public final String password = "";
 
 	@Bean
 	public Connection getConnection() {
-		if (System.getenv("DB-LOC") != null){
-			url = System.getenv("DB-LOC");
-			System.out.println(url);
+		if (System.getenv("UTOPIA_DB_UNAME") != null){
+			username = System.getenv("UTOPIA_DB_UNAME");
+		}
+		if (System.getenv("UTOPIA_DB_PASS") != null){
+			password = System.getenv("UTOPIA_DB_PASS");
+		}
+		if (System.getenv("DB_LOC") != null){
+			url = System.getenv("DB_LOC");
 		}
 		try {
 			Class.forName(driver);
