@@ -18,8 +18,8 @@ import java.sql.SQLException;
 public class ConnectionUtil {
 	public final String driver = "com.mysql.cj.jdbc.Driver";
 	public String url = "jdbc:mysql://MySQL:3306/utopia";
-	public final String username = "";
-	public final String password = "";
+	public String username = "";
+	public String password = "";
 
 	@Bean
 	public Connection getConnection() {
