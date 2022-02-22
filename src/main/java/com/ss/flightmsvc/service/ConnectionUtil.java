@@ -25,12 +25,15 @@ public class ConnectionUtil {
 	public Connection getConnection() {
 		if (System.getenv("UTOPIA_DB_UNAME") != null){
 			username = System.getenv("UTOPIA_DB_UNAME");
+			System.out.println(username);
 		}
 		if (System.getenv("UTOPIA_DB_PASS") != null){
 			password = System.getenv("UTOPIA_DB_PASS");
+			System.out.println(password);
 		}
 		if (System.getenv("DB_LOC") != null){
 			url = System.getenv("DB_LOC");
+			System.out.println(url);
 		}
 		try {
 			Class.forName(driver);
