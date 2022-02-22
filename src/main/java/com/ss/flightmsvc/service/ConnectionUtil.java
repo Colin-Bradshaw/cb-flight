@@ -6,8 +6,8 @@ package com.ss.flightmsvc.service;
 import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Service;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
+import java.sql.Connection.*;
+import java.sql.DriverManager.*;
 import java.sql.SQLException;
 
 /**
